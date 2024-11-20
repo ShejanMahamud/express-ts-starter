@@ -27,7 +27,7 @@ const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
     const decoded = jwt.verify(token, secretKey) as JwtPayload;
 
     // Attach the user info to the request object
-    req.user = decoded;
+    (req as any).user = decoded;
     next(); // Pass control to the next middleware or route handler
   } catch (err) {
     return res.status(403).json({ message: "Invalid or expired token." });
