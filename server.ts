@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import app from "./app";
 import { connectDB } from "./src/helpers/db";
 dotenv.config();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const uri: string = process.env.MONGO_URI || "";
 (async () => {
   try {

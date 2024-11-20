@@ -3,3 +3,6 @@ export interface IUser {
   email: string;
   password: string;
 }
+export interface ErrorWithStatus extends Error {
+  status?: number;
+}
