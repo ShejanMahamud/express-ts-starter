@@ -72,8 +72,11 @@ The generated project will have the following structure:
 my-express-project/
 
 ├── src/
-│ ├── controllers/
+│ ├── app/
+│   ├── app.ts
+│   ├── server.ts
 │ ├── middlewares/
+| ├── controllers/
 │ ├── routes/
 │ ├── models/
 │ ├── helpers/
@@ -82,8 +85,6 @@ my-express-project/
 ├── .prettierrc
 ├── .eslint.config.mjs
 ├── .env
-├── app.ts
-├── server.ts
 ├── package.json
 └── tsconfig.json
 
