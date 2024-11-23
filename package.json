@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "This is a starter template for Express.js with TypeScript and MongoDB using Mongoose. It includes ESLint, Prettier, and dotenv. It also includes a basic user authentication system using JWT. This template built with express-ts-starter-cli.",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
