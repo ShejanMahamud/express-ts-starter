@@ -1,18 +1,17 @@
 import cors from 'cors';
-import dotenv from 'dotenv';
 import type { Application, NextFunction, Request, Response } from 'express';
 import express from 'express';
 import { ZodError } from 'zod';
+import config from '../config';
 import userRoutes from '../routes/user.routes';
 import { ErrorWithStatus } from '../types/types';
 import { CustomError } from '../utils/customError';
-dotenv.config();
 
 const app: Application = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL || ''],
+    origin: [config.clientUrl || ''],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization'],

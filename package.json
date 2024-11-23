@@ -4,7 +4,7 @@
   "main": "/dist/src/app/server.js",
   "scripts": {
     "start": "node dist/src/app/server.js",
-    "dev": "ts-node src/app/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/app/server.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint '{src,./}/*.{ts,tsx}'",

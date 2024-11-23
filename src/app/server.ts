@@ -1,13 +1,12 @@
-import dotenv from 'dotenv';
+import config from '../config';
 import { connectDB } from '../helpers/db';
 import app from './app';
-dotenv.config();
-const PORT = process.env.PORT || 3000;
-const uri: string = process.env.MONGO_URI || '';
 (async () => {
   try {
-    await connectDB(uri);
-    app.listen(PORT, () => console.log(`APP RUNNING ON PORT: ${PORT}`));
+    await connectDB(config.databaseString);
+    app.listen(config.port, () =>
+      console.log(`APP RUNNING ON PORT: ${config.port}`),
+    );
   } catch (error) {
     console.error('Failed to Start the Server:', error);
     process.exit(1);
